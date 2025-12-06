@@ -1,7 +1,7 @@
 /* Background */
 body {
     font-family: Arial, sans-serif;
-    background: url("../static/weather.jpg") no-repeat center center fixed;
+    background: url("../static/nature.jpeg") no-repeat center center fixed;
     background-size: cover;
     text-align: center;
     padding: 40px;
