@@ -2,13 +2,20 @@ from flask import Flask, render_template, request
 import requests
 import os
 
-# ⭐ Add this import
 from prometheus_flask_exporter import PrometheusMetrics
+from prometheus_client import Counter
 
 app = Flask(__name__)
 
-# ⭐ Enable metrics
+# Enable Prometheus metrics
 metrics = PrometheusMetrics(app)
+
+# Counter WITH LABEL to track per-city search count
+CITY_SEARCH_COUNT = Counter(
+    'weather_city_search_total',
+    'Number of times a city was searched',
+    ['city']
+)
 
 API_KEY = "159f776152a2fd48e08898433586b7fe"  # Replace with your OpenWeather key
 
@@ -19,10 +26,15 @@ def home():
 
     if request.method == 'POST':
         city = request.form['city']
-        url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric"
+        
+        # Increment Prometheus counter for THIS city
+        CITY_SEARCH_COUNT.labels(city=city).inc()
 
+        # API call (limit=1 improves local place match)
+        url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&limit=1&appid={API_KEY}&units=metric"
         response = requests.get(url).json()
         print("API Response:", response)
+
         if response.get("cod") != 200:
             error = "City not found!"
         else:
