@@ -6,7 +6,8 @@ Flask-based weather reporting application that shows weather for user-entered ci
 This project demonstrates a complete DevOps pipeline:
 GitHub → Jenkins → Docker → Docker Hub → AWS EC2 → Monitoring → Cron Job Automation.
 
-## 🚀 Tech Stack / Tools & Services Used  
+## 🚀 Tech Stack / Tools & Services Used 
+```
 - Python + Flask (backend)  
 - HTML / CSS (frontend)  
 - Docker & Docker Hub (containerization)  
@@ -14,7 +15,7 @@ GitHub → Jenkins → Docker → Docker Hub → AWS EC2 → Monitoring → Cron
 - AWS EC2 (hosting & deployment)  
 - Monitoring tools — Prometheus, Grafana 
 - Cron (for automated log backup)  
-
+```
 ## 📦 How to Run Locally / Setup  
 
 1️⃣ Setup Instructions — Run Locally (Python)
@@ -46,7 +47,7 @@ This project uses a fully automated CI/CD pipeline:
 GitHub → Jenkins → Docker Build → Docker Hub → AWS EC2 Deployment → Monitoring
 
 ✔ Pipeline Steps:
-
+```
    -> Developer pushes code to GitHub
    -> Jenkins automatically triggers build
    -> Jenkins builds Docker image
@@ -56,7 +57,7 @@ GitHub → Jenkins → Docker Build → Docker Hub → AWS EC2 Deployment → Mo
    -> Runs container on port 5000
    -> Prometheus scrapes metrics
    -> Grafana visualizes dashboards
-
+```
 ## 🖥️ Deployment (AWS EC2)
 
 Stopped:Deployed...
@@ -84,6 +85,7 @@ Cron Entry
 * * * * * /home/ubuntu/backup.sh
 
 Backup Script
+```
 #!/bin/bash
 SOURCE="/home/ubuntu/app-logs/app.log"
 DEST="/home/ubuntu/backups"
@@ -92,12 +94,12 @@ mkdir -p $DEST
 cp $SOURCE $DEST/app.log-$(date +"%Y-%m-%d_%H-%M-%S")
 echo "Backup created at $(date)" >> /home/ubuntu/cron-job-history.log
 
-
+```
 This script creates time-stamped backups every minute.
 
 ## ⚙️ Challenges & Learnings
 Challenges
-
+```
 *Docker permission errors (docker.sock access denied)
 *Jenkins unable to push to Docker Hub due to wrong credential ID
 *SSH key mismatch between Jenkins and EC2
@@ -105,9 +107,9 @@ Challenges
 *Large Docker image caused slow push → fixed with .dockerignore
 *Jenkinsfile indentation & credential issues
 *Container removal error when old container didn’t exist
-
+```
 ## Learnings
-
+```
 Docker user/group management and permissions
 Jenkins credential handling (Docker Hub + SSH keys)
 Setting up secure SSH authentication with EC2
@@ -116,7 +118,7 @@ Writing and debugging Jenkins pipelines
 Understanding AWS networking (security groups, ports)
 Automating tasks using cron jobs
 Full real-world CI/CD implementation
-
+```
 ## 📸 Screenshots 
 
 Jenkins console output
@@ -146,8 +148,9 @@ Website
 
 📎 Source Code
 GitHub Repository:
+```
 https://github.com/IshuM210/Weather-Application.git
-
+```
 Conclusion
 This project demonstrates a complete end-to-end DevOps pipeline—from code development to automated deployment, monitoring, and maintenance. Implementing this project strengthened my understanding of CI/CD, cloud deployment, containerization, automation, troubleshooting, and modern DevOps practices.
 
