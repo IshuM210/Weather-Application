@@ -32,9 +32,10 @@ http://localhost:5000
 2️⃣ Setup Instructions — Run Using Docker
 
 For people who prefer running as a container.
-
+```
 docker build -t weather-app .
 docker run -d -p 5000:5000 weather-app
+```
 Open:
 http://localhost:5000
 
@@ -60,7 +61,7 @@ GitHub → Jenkins → Docker Build → Docker Hub → AWS EC2 Deployment → Mo
 
 Stopped:Deployed...
 Application deployed on AWS EC2 during CI/CD pipeline execution. Instance may be stopped to save cost.
-
+```
 ## 📂 Project Folder Structure
 Weather-Application/
 │── app.py
@@ -74,7 +75,7 @@ Weather-Application/
 │
 └── static/
     └── style.css
-
+```
 ## ⏱️ Cron Job Automation (Log Backup)
 
 A cron job runs on the Application EC2 instance to back up logs automatically.
