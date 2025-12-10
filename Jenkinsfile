@@ -13,7 +13,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 git branch: 'master',
-                url: 'https://github.com/IshuM210/Weather-app.git'
+                url: 'https://github.com/IshuM210/Weather-Application.git'
             }
         }
 
