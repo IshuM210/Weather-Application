@@ -20,12 +20,12 @@ GitHub → Jenkins → Docker → Docker Hub → AWS EC2 → Monitoring → Cron
 1️⃣ Setup Instructions — Run Locally (Python)
 
 For people without Docker or Jenkins.
-'''
+```
 git clone https://github.com/IshuM210/Weather-Application.git
 cd Weather-Application
 pip install -r requirements.txt
 python app.py
-'''
+```
 Then open:
 http://localhost:5000
 
