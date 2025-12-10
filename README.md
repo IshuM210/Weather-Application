@@ -133,8 +133,10 @@ Docker Hub repository
 EC2 instance running the application
 <img width="940" height="480" alt="image" src="https://github.com/user-attachments/assets/9401e3fe-baae-4cea-8683-9636b0526b06" />
 
-Prometheus & Grafana dashboards (if used)
+Prometheus 
 <img width="940" height="521" alt="image" src="https://github.com/user-attachments/assets/3ff117ee-ed79-42ea-814e-c58494d663ef" />
+
+Grafana Dashboard
 <img width="940" height="229" alt="image" src="https://github.com/user-attachments/assets/6d2800fb-b7e1-4f5e-8e3d-5da38e4f9560" />
 <img width="940" height="231" alt="image" src="https://github.com/user-attachments/assets/7617553a-d08b-4e37-9965-7c59b3016371" />
 <img width="940" height="233" alt="image" src="https://github.com/user-attachments/assets/d605c4d5-e76e-44ac-8c94-03450cbf46be" />
@@ -143,6 +145,7 @@ Prometheus & Grafana dashboards (if used)
 Cron job backups
 <img width="940" height="232" alt="image" src="https://github.com/user-attachments/assets/d474d29d-9fde-4a26-bf30-defc1d294efc" />
 <img width="940" height="261" alt="image" src="https://github.com/user-attachments/assets/93b2def9-e2a8-4b60-a486-1a0a7a3b277c" />
+
 Website
 <img width="940" height="487" alt="image" src="https://github.com/user-attachments/assets/9978441c-32f0-4f1e-a12c-a62d1399e2cf" />
 
