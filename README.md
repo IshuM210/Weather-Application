@@ -1,8 +1,10 @@
 # Weather Application — DevOps CI/CD Project
 
-## 🔍 Project Description  
-Weather-report web application powered by Flask (Python).  
-The project demonstrates a complete DevOps pipeline: code pushed to GitHub → automated build & containerization via Jenkins & Docker → deployment on AWS EC2 → monitoring + automated log backups via cron jobs.
+## 🔍 Project Description 
+Flask-based weather reporting application that shows weather for user-entered cities.
+
+This project demonstrates a complete DevOps pipeline:
+GitHub → Jenkins → Docker → Docker Hub → AWS EC2 → Monitoring → Cron Job Automation.
 
 ## 🚀 Tech Stack / Tools & Services Used  
 - Python + Flask (backend)  
@@ -117,7 +119,6 @@ Full real-world CI/CD implementation
 
 Jenkins console output
 <img width="940" height="513" alt="image" src="https://github.com/user-attachments/assets/ea7c4445-3a47-4388-851b-dd4149272396" />
-
 
 Docker images
 <img width="940" height="276" alt="image" src="https://github.com/user-attachments/assets/71d14518-1db9-461f-ac09-bb4e367419cc" />
